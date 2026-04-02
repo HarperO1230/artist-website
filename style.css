@@ -17,35 +17,79 @@ body {
     linear-gradient(135deg, var(--bg1), var(--bg2));
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: rgba(0,0,0,0.3);
+  padding: 25px 40px;
+  font-size: 1.3rem;
 }
 
-nav a {
-  color: white;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
+/* MAIN CONTAINER — centers vertically */
 .container {
-  padding: 60px 20px;
-  max-width: 900px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+  max-width: 1100px;
   margin: auto;
 }
 
+/* HUGE HEADLINES */
 h1 {
-  font-size: 3rem;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95;
+  margin-bottom: 20px;
   background: linear-gradient(90deg, var(--orange), var(--purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* BIG TEXT */
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 700px;
+}
+
+/* CARDS */
 .card {
   background: rgba(255,255,255,0.1);
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 15px;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 40px 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
 }
